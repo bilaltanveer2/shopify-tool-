@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Beautiful Pastel Design System with Soft Gradients */
+
+@layer base {
+  :root {
+    /* Pastel Color Palette */
+    --pastel-purple: 270 60% 85%;
+    --pastel-blue: 220 70% 85%;
+    --pastel-pink: 330 70% 85%;
+    --pastel-mint: 160 40% 80%;
+    --pastel-peach: 20 70% 85%;
+    --pastel-lavender: 250 70% 90%;
+    
+    /* Core Colors */
+    --background: 250 100% 99%;
+    --foreground: 240 10% 8%; /* Darker text in light mode */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%; /* Darker text in light mode */
+    --card-hover: 250 70% 97%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%; /* Darker text in light mode */
+    
+    --primary: 270 50% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 270 60% 95%;
+    --primary-hover: 270 50% 55%;
+    
+    --secondary: 220 60% 80%;
+    --secondary-foreground: 240 10% 8%; /* Darker text in light mode */
+    --secondary-soft: 220 60% 95%;
+    
+    --muted: 250 20% 96%;
+    --muted-foreground: 240 5% 35%; /* Darker muted text in light mode */
+    
+    --accent: 330 60% 80%;
+    --accent-foreground: 240 10% 15%;
+    --accent-soft: 330 60% 95%;
+    
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 250 30% 92%;
+    --input: 250 30% 92%;
+    --ring: 270 50% 65%;
+    
+    --radius: 1rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 85%), hsl(220 70% 85%));
+    --gradient-secondary: linear-gradient(135deg, hsl(330 70% 85%), hsl(20 70% 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 60% 85%), hsl(220 70% 85%), hsl(330 70% 85%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(250 70% 97%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.7), hsl(250 70% 95% / 0.5));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(270 50% 65% / 0.1);
+    --shadow-card: 0 10px 40px -10px hsl(270 50% 65% / 0.15);
+    --shadow-hover: 0 20px 60px -15px hsl(270 50% 65% / 0.25);
+    --shadow-glass: 0 8px 32px -4px hsl(270 50% 65% / 0.1), inset 0 1px 2px hsl(0 0% 100% / 0.5);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  .dark {
+    --pastel-purple: 270 40% 35%;
+    --pastel-blue: 220 50% 35%;
+    --pastel-pink: 330 50% 35%;
+    --pastel-mint: 160 30% 30%;
+    --pastel-peach: 20 50% 35%;
+    --pastel-lavender: 250 50% 40%;
+    
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%; /* Lighter text in dark mode */
+    
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%; /* Lighter text in dark mode */
+    --card-hover: 240 10% 15%;
+    
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%; /* Lighter text in dark mode */
+    
+    --primary: 270 50% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 270 40% 20%;
+    --primary-hover: 270 50% 65%;
+    
+    --secondary: 220 40% 30%;
+    --secondary-foreground: 0 0% 98%; /* Lighter text in dark mode */
+    --secondary-soft: 220 40% 15%;
+    
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 75%; /* Lighter muted text in dark mode */
+    
+    --accent: 330 40% 30%;
+    --accent-foreground: 0 0% 95%;
+    --accent-soft: 330 40% 15%;
+    
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 270 50% 55%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(270 40% 35%), hsl(220 50% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(330 50% 35%), hsl(20 50% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 40% 35%), hsl(220 50% 35%), hsl(330 50% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(240 10% 12%), hsl(240 10% 15%));
+    --gradient-glass: linear-gradient(145deg, hsl(240 10% 12% / 0.7), hsl(240 10% 15% / 0.5));
+    
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
+    --shadow-glass: 0 8px 32px -4px hsl(0 0% 0% / 0.3), inset 0 1px 2px hsl(0 0% 100% / 0.05);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-hover hover:-translate-y-1;
+  }
+  
+  .glass-effect {
+    @apply bg-gradient-glass backdrop-blur-md border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  /* Darker gradient text for light mode */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(240 10% 8%), hsl(240 10% 12%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Shining gradient text for dark mode */
+  .dark .gradient-text {
+    background: linear-gradient(135deg, hsl(270 60% 85%), hsl(220 70% 85%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(255, 255, 255, 0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .shimmer-effect {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+  
+  /* Shining text effect for dark mode */
+  .dark .shining-text {
+    color: #ffffff;
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Dark text for light mode */
+  .shining-text {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  
+  /* Darker button text for light mode */
+  .bg-gradient-primary {
+    color: #1a1a1a !important;
+    font-weight: 600;
+  }
+  
+  .bg-gradient-hero {
+    color: #1a1a1a !important;
+    font-weight: 600;
+  }
+  
+  /* Shining button text for dark mode */
+  .dark .bg-gradient-primary {
+    color: #ffffff !important;
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .dark .bg-gradient-hero {
+    color: #ffffff !important;
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Glow animation */
+  @keyframes glow {
+    from {
+      text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    to {
+      text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  /* High bounce animation for WhatsApp button */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    10% { transform: translateY(-20px) translateX(-3px); }
+    20% { transform: translateY(-35px) translateX(2px); }
+    30% { transform: translateY(-45px) translateX(-1px); }
+    40% { transform: translateY(-50px) translateX(4px); }
+    50% { transform: translateY(-45px) translateX(-2px); }
+    60% { transform: translateY(-30px) translateX(3px); }
+    70% { transform: translateY(-15px) translateX(-1px); }
+    80% { transform: translateY(-5px) translateX(2px); }
+    90% { transform: translateY(-2px) translateX(0); }
+  }
+
+  .animate-bounce {
+    animation: bounce 1.2s ease-in-out infinite;
+  }
+}
